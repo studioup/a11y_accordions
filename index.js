@@ -219,7 +219,7 @@
 
 				// setup new heading buttons
 				newButton  = doc.createElement('button');
-				buttonText = heading.textContent;
+				buttonText = heading.innerHTML;
 				// clear out the heading's content
 				heading.innerHTML = '';
 				// provide the heading with a class for styling
@@ -254,7 +254,7 @@
 
 				// Add the Button & previous heading text
 				heading.appendChild(newButton);
-				newButton.appendChild(doc.createTextNode(buttonText));
+				newButton.innerHTML = buttonText;
 			}
 		}; // ARIAaccordion.createButton
 
